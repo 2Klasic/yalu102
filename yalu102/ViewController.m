@@ -39,6 +39,8 @@ typedef struct {
 
     if (strstr(u.version, "MarijuanARM")) {
         [dope setEnabled:NO];
+        UIImage *btnImage = [UIImage imageNamed:@"AppIcon260x60"];
+        [dope setImage:btnImage forState:UIControlStateDisabled];
         [dope setTitle:@"already jailbroken" forState:UIControlStateDisabled];
     }
 
@@ -374,8 +376,8 @@ gotclock:;
     void exploit(void*, mach_port_t, uint64_t, uint64_t);
     exploit(sender, pt, kernel_base, allproc_offset);
     [dope setEnabled:NO];
-    UIImage *image = [UIImage imageNamed: @"AppIcon260x60"];
-    [dope setImage:image];
+    UIImage *btnImage2 = [UIImage imageNamed:@"AppIcon260x60"];
+    [dope setImage:btnImage2 forState:UIControlStateDisabled];
     [dope setTitle:@"already jailbroken" forState:UIControlStateDisabled];
 
 }
