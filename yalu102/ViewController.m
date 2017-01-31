@@ -374,6 +374,8 @@ gotclock:;
     void exploit(void*, mach_port_t, uint64_t, uint64_t);
     exploit(sender, pt, kernel_base, allproc_offset);
     [dope setEnabled:NO];
+    UIImage *image = [UIImage imageNamed: @"AppIcon260x60"];
+    [dope setImage:image];
     [dope setTitle:@"already jailbroken" forState:UIControlStateDisabled];
 
 }
